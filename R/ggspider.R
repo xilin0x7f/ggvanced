@@ -256,7 +256,7 @@ ggspider <- function(p_data,
                           arrow = arrow(ends = "both", angle = 90, length = unit(.1,"cm")))} +
     scale_linewidth(range = c(0, 4)) +
     ggplot2::geom_point(data = rescaled_data, ggplot2::aes(x, y, group = group, col = group), size = 2, stroke = 2) +
-    ggplot2::geom_path(data = rescaled_data, ggplot2::aes(x, y, group = group, col = group), size = 1) +
+    ggplot2::geom_path(data = rescaled_data, ggplot2::aes(x, y, group = group, col = group), linewidth = 1) +
     {if(area_fill == TRUE) ggplot2::geom_polygon(data = rescaled_data, ggplot2::aes(x, y, group = group, col = group, fill = group), size = 1, alpha = fill_opacity, show.legend = FALSE)} +
     {if(scaled == TRUE){
       ggplot2::geom_text(data = labels_data %>% dplyr::filter(parameter == labels_data$parameter[[1]]), ggplot2::aes(x, y, label = r), alpha = 0.65,
